@@ -1,5 +1,7 @@
+ifneq ($(filter fusion3-common yukon rhine shinano kanuti kitakami,$(PRODUCT_PLATFORM)),)
+
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(BOARD_VENDOR),sony)
-    include $(call all-subdir-makefiles,$(LOCAL_PATH))
+include $(call all-makefiles-under,$(LOCAL_PATH))
+
 endif
